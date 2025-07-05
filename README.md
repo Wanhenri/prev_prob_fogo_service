@@ -198,6 +198,31 @@ task lint
 task test
 task format
 ```
+---
+
+## 🖋️ Boas Práticas de Commits
+
+Para manter um histórico de commits claro, legível e consistente, siga as boas práticas:
+
+- Utilize mensagens no imperativo e com letra minúscula:
+  - Exemplo: `adiciona validacao de dados`
+- Prefixe a mensagem com um tipo de mudança:
+  - `feat`: nova funcionalidade
+  - `fix`: correção de bug
+  - `refactor`: refatoramento sem mudar comportamento
+  - `docs`: alterações de documentação
+  - `test`: testes adicionados ou modificados
+  - `chore`: tarefas de build ou configuração
+
+Exemplo:
+
+```bash
+git commit -m "feat: adiciona rota de previsao de fogo"
+```
+
+Para seguir uma convenção formal como o Conventional Commits:
+
+- Leia mais: [https://www.conventionalcommits.org/pt-br/v1.0.0/](https://www.conventionalcommits.org/pt-br/v1.0.0/)
 
 ---
 
