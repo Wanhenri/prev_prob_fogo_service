@@ -116,3 +116,7 @@ task --list
 pipx install ignr
 
 ignr -p python > .gitignore
+
+
+git remote add origin https://github.com/Wanhenri/prev_prob_fogo_service.git
+git push --set-upstream origin main
