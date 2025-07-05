@@ -1,13 +1,15 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
-
+"prev_prob_fogo/data/"
 *.csv
 *.shp
 *.shx
 *.dbf
 *.prj
 *.cpg
+
+*.tif
 
 ### Python ###
 # Byte-compiled / optimized / DLL files
