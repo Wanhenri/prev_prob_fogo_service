@@ -1,67 +1,99 @@
+# 🔥 prev\_prob\_fogo\_service
+
+Sistema de previsão de probabilidade de fogo utilizando FastAPI e Python 3.12.
+
+---
+
+## 📦 Estrutura Inicial do Projeto
+
+```bash
 poetry new prev_prob_fogo
 cd prev_prob_fogo
+```
 
-prev_prob_fogo
-    __init__.py
-poetry.lock
-README.md
-tests
-    ___init__.py
+Estrutura gerada:
 
-Python utilizado no projeto: 3.12.10
+```
+prev_prob_fogo/
+├── prev_prob_fogo/
+│   └── __init__.py
+├── tests/
+│   └── __init__.py
+├── poetry.lock
+└── README.md
+```
 
-Definir o python dentro do diretório prev_prob_fogo
+---
+
+## ⚙️ Configuração do Ambiente
+
+### ✅ Versão do Python
+
+O projeto utiliza **Python 3.12.10**. Recomenda-se o uso do `pyenv`:
+
+```bash
 pyenv local 3.12.10
+```
 
-Alteraçao no pyproject.toml
+### ✅ pyproject.toml
 
-[tool.poetry.dependencies]
-python = "3.12.*"
+Atualize as dependências principais para:
 
-execute:
-poetry install
-
-e criará o poetry.lock
-
-Instalado:
-- FastAPI
-
-
-poetry shell # ativa o venv
-
-fastapi dev fast_zero/app.py
-
-correção de um bug:
-
+```toml
 [tool.poetry.dependencies]
 python = "3.12.*"
 fastapi = {extras = ["standard"], version = "^0.115.14"}
+```
 
-poetry update
+### ✅ Instalação de Dependências
 
-ou 
+```bash
+poetry install
+```
 
-poetry add "fastapi[standard]"
+Isso gerará o arquivo `poetry.lock` automaticamente.
 
-O SWAGGER
+---
 
-http://localhost:8000/docs
+## 🚀 Executando a Aplicação
 
-O redoc
+Ative o ambiente virtual com:
 
-http://localhost:8000/redoc
+```bash
+poetry shell
+```
 
-Ferramentas
+E execute o servidor:
 
-Ruff
+```bash
+fastapi dev prev_prob_fogo/app.py
+```
 
+---
+
+## 📚 Documentação da API
+
+* Swagger: [http://localhost:8000/docs](http://localhost:8000/docs)
+* Redoc: [http://localhost:8000/redoc](http://localhost:8000/redoc)
+
+---
+
+## 🧠 Ferramentas e Qualidade de Código
+
+### 🧹 Ruff (Lint + Formatter)
+
+Instalação:
+
+```bash
 poetry add --group dev ruff
+```
 
-****Configurando o ruff
+#### Configuração no `pyproject.toml`:
 
+```toml
 [tool.ruff]
 line-length = 79
-extend-exclude = ['migrations]
+extend-exclude = ['migrations']
 
 [tool.ruff.lint]
 preview = true
@@ -70,32 +102,49 @@ select = ['I', 'F', 'E', 'W', 'PL', 'PT']
 [tool.ruff.format]
 preview = true
 quote-style = 'single'
+```
 
-documentação do ruff
-documentaçao PYQCA
+#### Comandos úteis:
 
-ruff check . # verifica os erros
-ruff check . --fix #Corrige os erros
+```bash
+ruff check .             # Verifica erros de lint
+ruff check . --fix       # Corrige automaticamente
+ruff format .            # Formata com aspas simples
+```
 
-ruff format . / #formatar as aspas duplas para aspas simples
+📄 Documentação: [https://docs.astral.sh/ruff](https://docs.astral.sh/ruff)
 
-****Pytest
+---
 
+### ✅ Pytest (Testes)
+
+Instalação:
+
+```bash
 poetry add --group dev pytest pytest-cov
+```
 
+#### Configuração:
+
+```toml
 [tool.pytest.ini_options]
 pythonpath = ''
 addopts = '-p no:warnings'
+```
 
-****Taskipy
+---
 
-ruff check .
-ruff check . --fix
-ruff format
-fastapi dev prev_prob_fogo/app.py
-pytest --cover=prev_prob_fogo -vv
-coverage html
+### 🧪 Taskipy (Scripts automatizados)
 
+Instalação:
+
+```bash
+poetry add --group dev taskipy
+```
+
+#### Configuração:
+
+```toml
 [tool.taskipy.tasks]
 run = 'fastapi dev prev_prob_fogo/app.py'
 test = 'pytest --cov=prev_prob_fogo -vv'
@@ -103,20 +152,57 @@ post_test = 'coverage html'
 lint = 'ruff check . && ruff check . --diff'
 format = 'ruff check . --fix && ruff format'
 
-observaçao: usuario de linux pode trocar o '&&'por ';'
-
-cadeia de comandos
-
+# Para uso com cadeia de testes:
 pre_test = 'task lint'
 test = 'pytest --cov=prev_prob_fogo -vv'
 post_test = 'coverage html'
+```
 
+> 🔁 **Observação para Linux**: troque `&&` por `;` caso necessário.
+
+📈 Listar tasks disponíveis:
+
+```bash
 task --list
+```
 
+---
+
+## 📽️ .gitignore
+
+Gere um `.gitignore` para Python com:
+
+```bash
 pipx install ignr
-
 ignr -p python > .gitignore
+```
 
+---
 
+## 🔗 GitHub
+
+Inicialize o repositório e conecte ao GitHub:
+
+```bash
+git init
 git remote add origin https://github.com/Wanhenri/prev_prob_fogo_service.git
 git push --set-upstream origin main
+```
+
+---
+
+## ✅ Resumo da Cadeia de Comandos
+
+```bash
+task lint
+task test
+task format
+```
+
+---
+
+## 📄 Licença
+
+Este projeto está licenciado sob a [MIT License](LICENSE).
+
+---
