@@ -1,7 +1,7 @@
 # Created by https://www.toptal.com/developers/gitignore/api/python
 # Edit at https://www.toptal.com/developers/gitignore?templates=python
 
-"prev_prob_fogo/data/"
+"/mnt/c/Users/WHS/Documents/prev_prob_fogo/data/"
 *.csv
 *.shp
 *.shx
@@ -9,6 +9,8 @@
 *.prj
 *.cpg
 
+
+*.png
 *.tif
 
 ### Python ###
