@@ -224,6 +224,8 @@ Para seguir uma convenção formal como o Conventional Commits:
 
 - Leia mais: [https://www.conventionalcommits.org/pt-br/v1.0.0/](https://www.conventionalcommits.org/pt-br/v1.0.0/)
 
+- Leia mais: [Breve resumo sobre o Conventional Commits](https://gist.github.com/ya-kimura/7a50a25f98f3627345e84e7a0cb110b5)
+
 ---
 
 ## 📄 Licença
