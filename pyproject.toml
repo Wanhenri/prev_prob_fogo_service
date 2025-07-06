@@ -9,6 +9,8 @@ packages = [{include = "prev_prob_fogo"}]
 [tool.poetry.dependencies]
 python = "3.12.*"
 fastapi = {extras = ["standard"], version = "^0.115.14"}
+geopandas = "^1.1.1"
+matplotlib = "^3.10.3"
 
 
 [tool.poetry.group.dev.dependencies]
